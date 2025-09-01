@@ -1,0 +1,14 @@
+{
+  "name": "template-with-agents",
+  "version": "1.0.0",
+  "description": "AGENTS.mdつきリポジトリテンプレート",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "philomagi <tooppoo56@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "turbo": "^2.5.6"
+  }
+}

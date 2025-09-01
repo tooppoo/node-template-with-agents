@@ -1,0 +1,17 @@
+{
+  "SCM_PROVIDER": "GitHub",
+  "DOMAIN_DOCS_DIR": "docs/domain",
+  "DOMAIN_MODEL_FILE": "docs/domain/domain-model.md",
+  "DIAGRAM_SYNTAX": "mermaid",
+  "ADR_DIR": "docs/adr",
+  "RUNTIME_CLI": "wrangler",
+  "PROPERTY_TEST_LIB": "fast-check",
+  "SAMPLE_TEST_LIB": "vitest",
+  "DEFAULT_BRANCH": "main",
+
+  "FRONTEND_FRAMEWORK": "{{FRONTEND_FRAMEWORK}}",
+  "APP_FRAMEWORK": "{{APP_FRAMEWORK}}",
+  "HOSTING": "{{HOSTING}}",
+  "DATABASE": "{{DATABASE}}",
+  "ORM": "{{ORM}}"
+}

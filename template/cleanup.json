@@ -1,0 +1,9 @@
+{
+  "paths": [
+    "template/HOWTO.md",
+    "template/ADR/20250901-codespaces-task-init.md"
+  ],
+  "options": {
+    "requireConfirm": true
+  }
+}

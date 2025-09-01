@@ -1,7 +1,9 @@
 {
   "paths": [
     "template/HOWTO.md",
-    "template/ADR/20250901-codespaces-task-init.md"
+    "template/ADR/20250901-codespaces-task-init.md",
+    ".github/PULL_REQUEST_TEMPLATE/AGENTS-init.md",
+    "template/README.template-notes.md"
   ],
   "options": {
     "requireConfirm": true

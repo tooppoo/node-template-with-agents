@@ -9,7 +9,7 @@ const repoRoot = path.resolve(__dirname, "..", "..");
 
 // 入力/出力パス
 const TEMPLATE_PATH = path.join(repoRoot, "template/inputs/AGENTS.template.md");
-const PARAMS_PATH = path.join(repoRoot, "template/inputs/template-params.json");
+const PARAMS_PATH = path.join(repoRoot, "template/inputs/params.json");
 const OUTPUT_PATH = path.join(repoRoot, "AGENTS.md");
 
 // ============= ユーティリティ =============

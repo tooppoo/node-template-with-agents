@@ -105,7 +105,7 @@ flowchart TD
 
 | 開発段階     | ドキュメント雛形                        | Issue テンプレート                   | PR チェック | セキュリティ | 可観測性 | i18n/a11y | リリース管理 |
 |--------------|----------------------------------------|--------------------------------------|-------------|--------------|----------|-----------|--------------|
-| 要求         | `docs/requests/{title}.md`             | `.github/ISSUE_TEMPLATE/request.yml` |             |              |          | ✅         |              |
+| 要求         | `docs/requests/{title}.md`             | `.github/ISSUE_TEMPLATE/request.yml` |             |              |          |           |              |
 | 要件         | `docs/requirements/{title}.md`         | `.github/ISSUE_TEMPLATE/requirement.yml` |             |              |          | ✅         |              |
 | 仕様         | `docs/spec/{title}.md`                 | `.github/ISSUE_TEMPLATE/spec.yml`    |             | ✅（ログ方針） | ✅（相関ID） |           |              |
 | 設計         | `docs/design/{title}.md`（必要に応じ追加） | —                                    |             | ✅            | ✅        |           |              |

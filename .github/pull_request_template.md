@@ -42,4 +42,4 @@
 
 ---
 
-📖 全体像や必須ルールの詳細は [docs/README.md](../docs/README.md) を参照してください。
+📖 全体像や必須ルールの詳細は [docs/README.md](docs/README.md) を参照してください。

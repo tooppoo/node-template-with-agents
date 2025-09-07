@@ -1,0 +1,45 @@
+name: "要求 (Request)"
+description: "アプリケーションを通じて実現したい事項を記録する"
+title: "要求: "
+labels: ["要求"]
+body:
+  - type: markdown
+    attributes:
+      value: "📖 全体像や必須ルールの詳細は [docs/README.md](docs/README.md) を参照してください。"
+  - type: input
+    id: who
+    attributes:
+      label: Who
+      description: この機能を使うユーザーは誰か
+      placeholder: "例: 一般ユーザー"
+  - type: input
+    id: what
+    attributes:
+      label: What
+      description: ユーザーは何をしたいのか
+      placeholder: "例: ランダムなアセンブルを生成したい"
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: その目的・価値は何か
+  - type: input
+    id: when
+    attributes:
+      label: When
+      description: いつ利用される想定か
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: どこで利用されるか
+  - type: textarea
+    id: how
+    attributes:
+      label: How
+      description: どのように実現される想定か（ざっくりで可）
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 受入基準
+      description: 検証可能な観測指標を記述

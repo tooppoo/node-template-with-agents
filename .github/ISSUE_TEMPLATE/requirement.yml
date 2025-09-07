@@ -1,0 +1,34 @@
+name: "要件 (Requirement)"
+description: "ユーザーと開発者が合意できる語彙でアプリの全体像を記述"
+title: "要件: "
+labels: ["要件"]
+body:
+  - type: markdown
+    attributes:
+      value: "📖 全体像や必須ルールの詳細は [docs/README.md](../../docs/README.md) を参照してください。"
+  - type: input
+    id: user-types
+    attributes:
+      label: ユーザー種別
+      description: どんな種類のユーザーがいるか
+      placeholder: "例: 一般ユーザー、管理者"
+  - type: textarea
+    id: info-structure
+    attributes:
+      label: 情報構造
+      description: アプリが扱う主要情報（概念）
+  - type: textarea
+    id: features
+    attributes:
+      label: 提供機能
+      description: ユーザーごとにどんな機能を提供するか
+  - type: textarea
+    id: value
+    attributes:
+      label: 得られる価値
+      description: 提供機能を通じてユーザーが実現できること
+  - type: textarea
+    id: i18n-a11y
+    attributes:
+      label: 国際化・アクセシビリティ
+      description: 検討内容。対象外の場合は理由を明記

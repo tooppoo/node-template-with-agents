@@ -1,0 +1,29 @@
+name: "開発チェックリスト"
+description: "必須ルールの確認用"
+title: "チェックリスト: "
+labels: ["チェックリスト"]
+body:
+  - type: markdown
+    attributes:
+      value: "📖 全体像や必須ルールの詳細は [docs/README.md](../../docs/README.md) を参照してください。"
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: 必須ルール確認
+      options:
+        - label: 要求 → シナリオ → 要件 → ユースケース → 仕様 → 設計 の流れを守っている
+        - label: ADR に修正方針を記録した
+        - label: 国際化 / アクセシビリティ 検討済み
+        - label: 設計は低結合・高凝集で mermaid 図を更新
+        - label: 秘密情報を直書きしていない
+        - label: 依存ライブラリの脆弱性チェック済み
+        - label: 構造化ログで機微情報を出さず、マスキングルールを検証
+        - label: ログに相関IDを付与
+        - label: ユニットテストと e2e テストを用意
+        - label: カバレッジ可視化済み
+        - label: インフラは無料/安価枠を優先し ADR に理由を記録
+        - label: DB スキーマ管理＋マイグレーション計画あり
+        - label: main 直コミット禁止を守った
+        - label: 破壊的変更を CHANGELOG または ADR に記録
+        - label: 自動リリースノート生成を確認
+        - label: PR タイトル・コミットメッセージは命名規約に従っている

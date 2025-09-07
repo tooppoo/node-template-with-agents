@@ -97,7 +97,7 @@ flowchart TD
 ## 必須ルール一覧
 
 必須ルールの詳細なチェック項目は
-[開発チェックリスト](./checklists/dev-checklist.md) を参照してください。
+`docs/checklists/dev-checklist.md` を参照してください。
 
 ---
 

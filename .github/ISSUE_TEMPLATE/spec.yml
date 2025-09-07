@@ -5,7 +5,7 @@ labels: ["仕様"]
 body:
   - type: markdown
     attributes:
-      value: "📖 全体像や必須ルールの詳細は [docs/README.md](../../docs/README.md) を参照してください。"
+      value: "📖 全体像や必須ルールの詳細は [docs/README.md](docs/README.md) を参照してください。"
   - type: input
     id: related-usecase
     attributes:

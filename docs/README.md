@@ -35,7 +35,6 @@
 - **パス**: `docs/requirements/{title}.md`
 - **用途**: ユーザー種別・情報構造・提供機能・価値を整理。概念モデルを含む
 - **内容**: ユーザー種別、情報構造、提供機能、得られる価値、セキュリティ、i18n・a11y、概念モデル（mermaid classDiagram）
-- 
 ---
 
 ## ユースケース
@@ -116,12 +115,12 @@ flowchart TD
 |--------------|-------------------------------------------|--------------------------------------------|-------------|-------------|----------|-----------|--------------|
 | 要求         | `docs/requests/{title}.md`                | `.github/ISSUE_TEMPLATE/request.yml`       |             |             |          |           |              |
 | シナリオ     | `docs/scenario/{title}.md`                | —                                          |             |             |          |           |              |
-| 要件         | `docs/requirements/{title}.md`            | —                                          |             |      ✅       | ✅        |    ✅       |              |
+| 要件         | `docs/requirements/{title}.md`            | —   |             |       ✅      |    ✅      | ✅        |              |
 | ユースケース | `docs/usecases/{title}.md`                | —                                          |             |             |          |           |              |
-| 仕様         | `docs/spec/{title}.md`                    | —                                          |             | ✅（ログ方針） | ✅（相関ID） |   ✅        |              |
-| 設計         | `docs/design/{title}.md`                  | —                                          |             | ✅          | ✅        |     ✅      |              |
-| ADR          | `docs/adr/YYYYMMDD-title.md`              | —                                          |             | ✅          | ✅        |           |              |
-| チェックリスト | `docs/checklists/dev-checklist.md`      | —                                          | `.github/pull_request_template.md` | ✅ | ✅ | ✅ | ✅ |
+| 仕様         | `docs/spec/{title}.md`                    | —          |             | ✅ | ✅ |    ✅       |              |
+| 設計         | `docs/design/{title}.md`                  | —                                          |             | ✅           | ✅        |    ✅       |              |
+| ADR          | `docs/adr/YYYYMMDD-title.md`              | —                                          |             | ✅           | ✅        |           |              |
+| チェックリスト | `docs/checklists/dev-checklist.md`      | —     | `.github/pull_request_template.md` | ✅ | ✅ | ✅ | ✅ |
 | リリース     | —                                         | —                                          | `.github/pull_request_template.md` | ✅（リリースノート品質） |          |           | ✅（自動生成必須） |
 
 ---

@@ -80,31 +80,6 @@
 - **用途**: 新しい要求を登録する
 - **内容**: Who / What / Why / When / Where / How、受入基準
 
-### シナリオ
-- **パス**: `.github/ISSUE_TEMPLATE/scenario.yml`
-- **用途**: 新しいシナリオを登録する
-- **内容**: アクター、ゴール、フロー、受入基準
-
-### 要件
-- **パス**: `.github/ISSUE_TEMPLATE/requirement.yml`
-- **用途**: 新しい要件を登録する
-- **内容**: ユーザー種別、情報構造、提供機能、価値、i18n・a11y
-
-### ユースケース
-- **パス**: `.github/ISSUE_TEMPLATE/usecase.yml`
-- **用途**: 新しいユースケースを登録する
-- **内容**: アクター、トリガー、前提条件、基本フロー、代替フロー、後提条件
-
-### 仕様
-- **パス**: `.github/ISSUE_TEMPLATE/spec.yml`
-- **用途**: 新しい仕様を登録する
-- **内容**: 対応ユースケース、公開操作、入力要件、出力契約、制限事項、セキュリティ、可観測性
-
-### 開発チェックリスト
-- **パス**: `.github/ISSUE_TEMPLATE/checklist.yml`
-- **用途**: 開発タスクの必須ルール確認
-- **内容**: 必須ルールをまとめたチェックボックス群（要求〜仕様・設計・セキュリティ・テスト・インフラ・リリース）
-
 ---
 
 ## 運用フロー（概要）
@@ -140,13 +115,13 @@ flowchart TD
 | 開発段階     | ドキュメント雛形                          | Issue テンプレート                         | PR チェック | セキュリティ | 可観測性 | i18n/a11y | リリース管理 |
 |--------------|-------------------------------------------|--------------------------------------------|-------------|-------------|----------|-----------|--------------|
 | 要求         | `docs/requests/{title}.md`                | `.github/ISSUE_TEMPLATE/request.yml`       |             |             |          |           |              |
-| シナリオ     | `docs/scenario/{title}.md`                | `.github/ISSUE_TEMPLATE/scenario.yml`      |             |             |          |           |              |
-| 要件         | `docs/requirements/{title}.md`            | `.github/ISSUE_TEMPLATE/requirement.yml`   |             |             |          | ✅        |              |
-| ユースケース | `docs/usecases/{title}.md`                | `.github/ISSUE_TEMPLATE/usecase.yml`       |             |             |          |           |              |
-| 仕様         | `docs/spec/{title}.md`                    | `.github/ISSUE_TEMPLATE/spec.yml`          |             | ✅（ログ方針） | ✅（相関ID） |           |              |
-| 設計         | `docs/design/{title}.md`                  | —                                          |             | ✅           | ✅        |           |              |
-| ADR          | `docs/adr/YYYYMMDD-title.md`              | —                                          |             | ✅           | ✅        |           |              |
-| チェックリスト | `docs/checklists/dev-checklist.md`      | `.github/ISSUE_TEMPLATE/checklist.yml`     | `.github/pull_request_template.md` | ✅ | ✅ | ✅ | ✅ |
+| シナリオ     | `docs/scenario/{title}.md`                | —                                          |             |             |          |           |              |
+| 要件         | `docs/requirements/{title}.md`            | —                                          |             |             | ✅        |           |              |
+| ユースケース | `docs/usecases/{title}.md`                | —                                          |             |             |          |           |              |
+| 仕様         | `docs/spec/{title}.md`                    | —                                          |             | ✅（ログ方針） | ✅（相関ID） |           |              |
+| 設計         | `docs/design/{title}.md`                  | —                                          |             | ✅          | ✅        |           |              |
+| ADR          | `docs/adr/YYYYMMDD-title.md`              | —                                          |             | ✅          | ✅        |           |              |
+| チェックリスト | `docs/checklists/dev-checklist.md`      | —                                          | `.github/pull_request_template.md` | ✅ | ✅ | ✅ | ✅ |
 | リリース     | —                                         | —                                          | `.github/pull_request_template.md` | ✅（リリースノート品質） |          |           | ✅（自動生成必須） |
 
 ---

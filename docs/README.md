@@ -103,16 +103,37 @@ flowchart TD
 
 ## テンプレート対応表
 
-| 開発段階    | ドキュメント雛形                           | Issue テンプレート                             | PR チェック                            | セキュリティ       | 可観測性    | i18n/a11y | リリース管理    |
-| ------- | ---------------------------------- | ---------------------------------------- | ---------------------------------- | ------------ | ------- | --------- | --------- |
-| 要求      | `docs/requests/{title}.md`         | `.github/ISSUE_TEMPLATE/request.yml`     |                                    |              |         | ✅         |           |
-| 要件      | `docs/requirements/{title}.md`     | `.github/ISSUE_TEMPLATE/requirement.yml` |                                    |              |         | ✅         |           |
-| 仕様      | `docs/spec/{title}.md`             | `.github/ISSUE_TEMPLATE/spec.yml`        |                                    | ✅（ログ方針）      | ✅（相関ID） |           |           |
-| 設計      | `docs/design/{title}.md`（必要に応じ追加）  | —                                        |                                    | ✅            | ✅       |           |           |
-| ADR     | `docs/adr/YYYYMMDD-title.md`       | —                                        |                                    | ✅            | ✅       |           |           |
-| チェックリスト | `docs/checklists/dev-checklist.md` | `.github/ISSUE_TEMPLATE/checklist.yml`   | `.github/pull_request_template.md` | ✅            | ✅       | ✅         | ✅         |
-| リリース    | —                                  | —                                        | `.github/pull_request_template.md` | ✅（リリースノート品質） |         |           | ✅（自動生成必須） |
+| 開発段階     | ドキュメント雛形                        | Issue テンプレート                   | PR チェック | セキュリティ | 可観測性 | i18n/a11y | リリース管理 |
+|--------------|----------------------------------------|--------------------------------------|-------------|--------------|----------|-----------|--------------|
+| 要求         | `docs/requests/{title}.md`             | `.github/ISSUE_TEMPLATE/request.yml` |             |              |          | ✅         |              |
+| 要件         | `docs/requirements/{title}.md`         | `.github/ISSUE_TEMPLATE/requirement.yml` |             |              |          | ✅         |              |
+| 仕様         | `docs/spec/{title}.md`                 | `.github/ISSUE_TEMPLATE/spec.yml`    |             | ✅（ログ方針） | ✅（相関ID） |           |              |
+| 設計         | `docs/design/{title}.md`（必要に応じ追加） | —                                    |             | ✅            | ✅        |           |              |
+| ADR          | `docs/adr/YYYYMMDD-title.md`           | —                                    |             | ✅            | ✅        |           |              |
+| チェックリスト | `docs/checklists/dev-checklist.md`     | `.github/ISSUE_TEMPLATE/checklist.yml` | `.github/pull_request_template.md` | ✅ | ✅ | ✅ | ✅ |
+| リリース     | —                                      | —                                    | `.github/pull_request_template.md` | ✅（リリースノート品質） |          |           | ✅（自動生成必須） |
 
 ---
 
-この表で、**どのテンプレートがどの必須ルール観点をカバーしているか**を確認できます。
+## チェックリストの使い分け
+
+- **`docs/checklists/dev-checklist.md`**  
+  - 開発全体のルールを体系的にまとめた「基準表」  
+  - 必須ルールの真実のソース（ソース・オブ・トゥルース）  
+  - 更新が必要になった場合は、まずここを修正する  
+
+- **Issue / PR テンプレートのチェックリスト**  
+  - 各タスクや PR ごとに「今回守ったか？」を確認するためのチェック欄  
+  - 作業履歴の中に「チェック済み」が残る  
+  - 実務向けのチェックシートとして使う  
+
+### 運用イメージ
+1. **ルール更新** → `docs/checklists/dev-checklist.md` を修正する  
+2. **テンプレ参照** → 必要に応じて Issue / PR テンプレートに反映する  
+3. **作業実行** → 各 Issue / PR のチェック欄を埋める  
+
+👉 こうすることで、  
+- `docs/` 側が **ルールブック**  
+- Issue/PR 側が **現場のチェックシート**  
+
+という役割分担が明確になります。

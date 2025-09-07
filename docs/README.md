@@ -5,6 +5,8 @@
 これらの雛形は、**必須ルール（要求→シナリオ→要件→ユースケース→仕様→設計→実装→テストの流れ、セキュリティ・可観測性・i18n/a11y・リリース管理など）に基づいて設計されています**。  
 必須ルールに沿ってドキュメントやタスクを作成することで、個人開発でも将来の拡張や保守が容易になります。
 
+なお、シナリオとユースケースに関するテンプレートは現時点では未整備で、今後追加予定です。
+
 各ファイルは以下のパスに配置してください。
 
 ---
@@ -83,10 +85,10 @@
 flowchart TD
     A[要求の起票<br/>docs/requests] --> B[要件の定義<br/>docs/requirements]
     B --> C[仕様の作成<br/>docs/spec]
-    C --> D[設計・実装・テスト]
-    D --> E[Pull Request<br/>.github/pull_request_template.md]
-    E --> F[リリース<br/>自動リリースノート生成]
-    F --> G[ADR更新<br/>docs/adr]
+    C --> D[ADR作成・更新<br/>docs/adr]
+    D --> E[設計・実装・テスト]
+    E --> F[Pull Request<br/>.github/pull_request_template.md]
+    F --> G[リリース<br/>自動リリースノート生成]
     G --> A
 ```
 
@@ -103,16 +105,17 @@ flowchart TD
 
 ## テンプレート対応表
 
-| 開発段階     | ドキュメント雛形                        | Issue テンプレート                   | PR チェック | セキュリティ | 可観測性 | i18n/a11y | リリース管理 |
-|--------------|----------------------------------------|--------------------------------------|-------------|--------------|----------|-----------|--------------|
-| 要求         | `docs/requests/{title}.md`             | `.github/ISSUE_TEMPLATE/request.yml` |             |              |          |           |              |
-| 要件         | `docs/requirements/{title}.md`         | `.github/ISSUE_TEMPLATE/requirement.yml` |             |              |          | ✅         |              |
-| 仕様         | `docs/spec/{title}.md`                 | `.github/ISSUE_TEMPLATE/spec.yml`    |             | ✅（ログ方針） | ✅（相関ID） |           |              |
-| 設計         | `docs/design/{title}.md`（必要に応じ追加） | —                                    |             | ✅            | ✅        |           |              |
-| ADR          | `docs/adr/YYYYMMDD-title.md`           | —                                    |             | ✅            | ✅        |           |              |
-| チェックリスト | `docs/checklists/dev-checklist.md`     | `.github/ISSUE_TEMPLATE/checklist.yml` | `.github/pull_request_template.md` | ✅ | ✅ | ✅ | ✅ |
-| リリース     | —                                      | —                                    | `.github/pull_request_template.md` | ✅（リリースノート品質） |          |           | ✅（自動生成必須） |
-
+| 開発段階     | ドキュメント雛形                                | Issue テンプレート                   | PR チェック | セキュリティ | 可観測性 | i18n/a11y | リリース管理 |
+|--------------|----------------------------------------------|--------------------------------------|-------------|--------------|----------|-----------|--------------|
+| 要求         | `docs/requests/{title}.md`                   | `.github/ISSUE_TEMPLATE/request.yml` |             |              |          |           |              |
+| シナリオ     | — （テンプレート未提供）                        | —                                    |             |              |          |           |              |
+| 要件         | `docs/requirements/{title}.md`               | `.github/ISSUE_TEMPLATE/requirement.yml` |             |              |          | ✅        |              |
+| ユースケース | — （テンプレート未提供）                        | —                                    |             |              |          |           |              |
+| 仕様         | `docs/spec/{title}.md`                       | `.github/ISSUE_TEMPLATE/spec.yml`    |             | ✅（ログ方針） | ✅（相関ID） |           |              |
+| 設計         | `docs/design/{title}.md`（雛形なし、必要に応じ作成） | —                                    |             | ✅            | ✅        |           |              |
+| ADR          | `docs/adr/YYYYMMDD-title.md`                 | —                                    |             | ✅            | ✅        |           |              |
+| チェックリスト | `docs/checklists/dev-checklist.md`         | `.github/ISSUE_TEMPLATE/checklist.yml` | `.github/pull_request_template.md` | ✅ | ✅ | ✅ | ✅ |
+| リリース     | —                                            | —                                    | `.github/pull_request_template.md` | ✅（リリースノート品質） |          |           | ✅（自動生成必須） |
 ---
 
 ## チェックリストの使い分け

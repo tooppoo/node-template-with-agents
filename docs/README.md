@@ -1,4 +1,4 @@
-——# ドキュメントテンプレート一覧
+# ドキュメントテンプレート一覧
 
 本リポジトリでは、個人開発における秩序だった開発を進めるために、要求定義からリリースまで一貫して管理するテンプレートを整備しています。
 
@@ -115,12 +115,12 @@ flowchart TD
 |--------------|-------------------------------------------|--------------------------------------------|-------------|-------------|----------|-----------|--------------|
 | 要求         | `docs/requests/{title}.md`                | `.github/ISSUE_TEMPLATE/request.yml`       |             |             |          |           |              |
 | シナリオ     | `docs/scenario/{title}.md`                | —                                          |             |             |          |           |              |
-| 要件         | `docs/requirements/{title}.md`            | `.github/ISSUE_TEMPLATE/requirement.yml`   |             |             |          | ✅        |              |
+| 要件         | `docs/requirements/{title}.md`            | —   |             |       ✅      |    ✅      | ✅        |              |
 | ユースケース | `docs/usecases/{title}.md`                | —                                          |             |             |          |           |              |
-| 仕様         | `docs/spec/{title}.md`                    | `.github/ISSUE_TEMPLATE/spec.yml`          |             | ✅（ログ方針） | ✅（相関ID） |           |              |
-| 設計         | `docs/design/{title}.md`                  | —                                          |             | ✅           | ✅        |           |              |
+| 仕様         | `docs/spec/{title}.md`                    | —          |             | ✅ | ✅ |    ✅       |              |
+| 設計         | `docs/design/{title}.md`                  | —                                          |             | ✅           | ✅        |    ✅       |              |
 | ADR          | `docs/adr/YYYYMMDD-title.md`              | —                                          |             | ✅           | ✅        |           |              |
-| チェックリスト | `docs/checklists/dev-checklist.md`      | `.github/ISSUE_TEMPLATE/checklist.yml`     | `.github/pull_request_template.md` | ✅ | ✅ | ✅ | ✅ |
+| チェックリスト | `docs/checklists/dev-checklist.md`      | —     | `.github/pull_request_template.md` | ✅ | ✅ | ✅ | ✅ |
 | リリース     | —                                         | —                                          | `.github/pull_request_template.md` | ✅（リリースノート品質） |          |           | ✅（自動生成必須） |
 
 ---

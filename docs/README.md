@@ -1,8 +1,8 @@
 # ドキュメントテンプレート一覧
 
-本リポジトリでは、個人開発における秩序だった開発を進めるために、要求定義からリリースまで一貫して管理するテンプレートを整備しています。  
+本リポジトリでは、個人開発における秩序だった開発を進めるために、要求定義からリリースまで一貫して管理するテンプレートを整備しています。
 
-これらの雛形は、**必須ルール（要求→シナリオ→要件→ユースケース→仕様→設計→実装→テストの流れ、セキュリティ・可観測性・i18n/a11y・リリース管理など）に基づいて設計されています**。  
+これらの雛形は、**必須ルール（要求→シナリオ→要件→ユースケース→仕様→設計→実装→テストの流れ、セキュリティ・可観測性・i18n/a11y・リリース管理など）に基づいて設計されています**。
 必須ルールに沿ってドキュメントやタスクを作成することで、個人開発でも将来の拡張や保守が容易になります。
 
 
@@ -131,8 +131,7 @@ flowchart TD
 
 ## 必須ルール一覧
 
-必須ルールの詳細なチェック項目は
-`docs/checklists/dev-checklist.md` を参照してください。
+必須ルールの詳細なチェック項目は [docs/checklists/dev-checklist.md](docs/checklists/dev-checklist.md) を参照してください。
 
 ---
 
@@ -140,36 +139,38 @@ flowchart TD
 
 | 開発段階     | ドキュメント雛形                          | Issue テンプレート                         | PR チェック | セキュリティ | 可観測性 | i18n/a11y | リリース管理 |
 |--------------|-------------------------------------------|--------------------------------------------|-------------|-------------|----------|-----------|--------------|
-| 要求         | `docs/requests/{title}.md`               | `.github/ISSUE_TEMPLATE/request.yml`       |             |             |          |           |              |
-| シナリオ     | `docs/scenario/{title}.md`               | `.github/ISSUE_TEMPLATE/scenario.yml`      |             |             |          |           |              |
-| 要件         | `docs/requirements/{title}.md`           | `.github/ISSUE_TEMPLATE/requirement.yml`   |             |             |          | ✅        |              |
-| ユースケース | `docs/usecases/{title}.md`              | `.github/ISSUE_TEMPLATE/usecase.yml`       |             |             |          |           |              |
-| 仕様         | `docs/spec/{title}.md`                   | `.github/ISSUE_TEMPLATE/spec.yml`          |             | ✅（ログ方針） | ✅（相関ID） |           |              |
-| 設計         | `docs/design/{title}.md`                 | —                                          |             | ✅           | ✅        |           |              |
-| ADR          | `docs/adr/YYYYMMDD-title.md`            | —                                          |             | ✅           | ✅        |           |              |
-| チェックリスト | `docs/checklists/dev-checklist.md`     | `.github/ISSUE_TEMPLATE/checklist.yml`     | `.github/pull_request_template.md` | ✅ | ✅ | ✅ | ✅ |
-| リリース     | —                                       | —                                          | `.github/pull_request_template.md` | ✅（リリースノート品質） |          |           | ✅（自動生成必須） |
+| 要求         | `docs/requests/{title}.md`                | `.github/ISSUE_TEMPLATE/request.yml`       |             |             |          |           |              |
+| シナリオ     | `docs/scenario/{title}.md`                | `.github/ISSUE_TEMPLATE/scenario.yml`      |             |             |          |           |              |
+| 要件         | `docs/requirements/{title}.md`            | `.github/ISSUE_TEMPLATE/requirement.yml`   |             |             |          | ✅        |              |
+| ユースケース | `docs/usecases/{title}.md`                | `.github/ISSUE_TEMPLATE/usecase.yml`       |             |             |          |           |              |
+| 仕様         | `docs/spec/{title}.md`                    | `.github/ISSUE_TEMPLATE/spec.yml`          |             | ✅（ログ方針） | ✅（相関ID） |           |              |
+| 設計         | `docs/design/{title}.md`                  | —                                          |             | ✅           | ✅        |           |              |
+| ADR          | `docs/adr/YYYYMMDD-title.md`              | —                                          |             | ✅           | ✅        |           |              |
+| チェックリスト | `docs/checklists/dev-checklist.md`      | `.github/ISSUE_TEMPLATE/checklist.yml`     | `.github/pull_request_template.md` | ✅ | ✅ | ✅ | ✅ |
+| リリース     | —                                         | —                                          | `.github/pull_request_template.md` | ✅（リリースノート品質） |          |           | ✅（自動生成必須） |
+
 ---
+
 
 ## チェックリストの使い分け
 
-- **`docs/checklists/dev-checklist.md`**  
-  - 開発全体のルールを体系的にまとめた「基準表」  
-  - 必須ルールの真実のソース（ソース・オブ・トゥルース）  
-  - 更新が必要になった場合は、まずここを修正する  
+- **`docs/checklists/dev-checklist.md`**
+  - 開発全体のルールを体系的にまとめた「基準表」
+  - 必須ルールの真実のソース（ソース・オブ・トゥルース）
+  - 更新が必要になった場合は、まずここを修正する
 
-- **Issue / PR テンプレートのチェックリスト**  
-  - 各タスクや PR ごとに「今回守ったか？」を確認するためのチェック欄  
-  - 作業履歴の中に「チェック済み」が残る  
-  - 実務向けのチェックシートとして使う  
+- **Issue / PR テンプレートのチェックリスト**
+  - 各タスクや PR ごとに「今回守ったか？」を確認するためのチェック欄
+  - 作業履歴の中に「チェック済み」が残る
+  - 実務向けのチェックシートとして使う
 
 ### 運用イメージ
-1. **ルール更新** → `docs/checklists/dev-checklist.md` を修正する  
-2. **テンプレ参照** → 必要に応じて Issue / PR テンプレートに反映する  
-3. **作業実行** → 各 Issue / PR のチェック欄を埋める  
+1. **ルール更新** → `docs/checklists/dev-checklist.md` を修正する
+2. **テンプレ参照** → 必要に応じて Issue / PR テンプレートに反映する
+3. **作業実行** → 各 Issue / PR のチェック欄を埋める
 
-👉 こうすることで、  
-- `docs/` 側が **ルールブック**  
-- Issue/PR 側が **現場のチェックシート**  
+👉 こうすることで、
+- `docs/` 側が **ルールブック**
+- Issue/PR 側が **現場のチェックシート**
 
 という役割分担が明確になります。

@@ -1,0 +1,39 @@
+name: "ユースケース (Use Case)"
+description: "要件をもとに機能ごとの利用手順を明確化する"
+title: "ユースケース: "
+labels: ["ユースケース"]
+body:
+  - type: markdown
+    attributes:
+      value: "📖 全体像や必須ルールの詳細は [docs/README.md](docs/README.md) を参照してください。"
+  - type: input
+    id: actor
+    attributes:
+      label: アクター
+      description: 利用者
+  - type: input
+    id: trigger
+    attributes:
+      label: トリガー
+      description: ユースケースを開始する条件
+  - type: textarea
+    id: preconditions
+    attributes:
+      label: 前提条件
+      description: 開始前に満たすべき条件
+  - type: textarea
+    id: basic-flow
+    attributes:
+      label: 基本フロー
+      description: 主な成功パターンの手順
+  - type: textarea
+    id: alternative-flow
+    attributes:
+      label: 代替フロー
+      description: 例外や分岐の手順
+  - type: textarea
+    id: postconditions
+    attributes:
+      label: 後提条件
+      description: 完了後の状態
+

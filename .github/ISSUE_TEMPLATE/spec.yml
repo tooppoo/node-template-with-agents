@@ -1,0 +1,48 @@
+name: "仕様 (Specification)"
+description: "ユースケースに基づいてアプリの機能を定義する"
+title: "仕様: "
+labels: ["仕様"]
+body:
+  - type: markdown
+    attributes:
+      value: "📖 全体像や必須ルールの詳細は [docs/README.md](docs/README.md) を参照してください。"
+  - type: input
+    id: related-usecase
+    attributes:
+      label: 対応ユースケース
+      description: 関連するユースケースを明記
+  - type: textarea
+    id: operations
+    attributes:
+      label: 公開操作
+      description: ユーザーに公開される操作や API/UI
+  - type: textarea
+    id: inputs
+    attributes:
+      label: 入力要件
+      description: ユーザーが提供すべき情報とバリデーションルール
+  - type: textarea
+    id: outputs
+    attributes:
+      label: 出力契約
+      description: アプリが返す情報や状態変化
+  - type: textarea
+    id: restrictions
+    attributes:
+      label: 制限事項
+      description: 特記事項が無ければ「無し」と明記
+  - type: textarea
+    id: security
+    attributes:
+      label: セキュリティ
+      description: 構造化ログ・マスキングルール・機微情報の扱い
+  - type: textarea
+    id: observability
+    attributes:
+      label: 可観測性
+      description: 相関ID付与、監査ログ要件など
+  - type: textarea
+    id: i18n-a11y
+    attributes:
+      label: 国際化・アクセシビリティ
+      description: 対応方針や対象外の理由
